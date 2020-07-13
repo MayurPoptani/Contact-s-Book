@@ -1,6 +1,9 @@
 # contacts_app
 
 A new Flutter project.
+Develop with LOVE in FLUTTER.
+By "Mayur Poptani".
+Internship selection Task by "Papa Fit"
 
 ## Getting Started
 
