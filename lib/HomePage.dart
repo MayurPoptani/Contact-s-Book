@@ -98,6 +98,9 @@ class _HomePageState extends State<HomePage> {
   
   Widget bottomNavBar() {
     return BottomNavigationBar(
+      backgroundColor: isDark?Color(0xFF212121):Colors.white,
+      selectedItemColor: isDark?Colors.white:Colors.black,
+      unselectedItemColor: isDark?Colors.white70:Colors.black38,
       currentIndex: _pageIndex,
       items: [
         getBottomNavItem(Icons.contacts, "Contacts"),

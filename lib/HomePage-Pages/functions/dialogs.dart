@@ -18,8 +18,8 @@ Future<Contact> addNewContactItemDialog(BuildContext context, {Contact contact})
   return await showDialog<Contact>(
     context: context,
     useRootNavigator: true,
-    useSafeArea: true,
-    barrierColor: !isDark?null:Colors.white.withOpacity(0.05),
+    // useSafeArea: true,
+    // barrierColor: !isDark?null:Colors.white.withOpacity(0.05),
     builder: (_) {
       return StatefulBuilder(builder: (_, stateSetter) => AlertDialog(
           backgroundColor: isDark?Colors.black:Colors.white,
@@ -133,8 +133,8 @@ Future<MapEntry<Group,List<int>>> addNewGroupItemDialog(BuildContext context, {M
   return await showDialog<MapEntry<Group,List<int>>>(
     context: context,
     useRootNavigator: true,
-    useSafeArea: true,
-    barrierColor: !isDark?null:Colors.white.withOpacity(0.05),
+    // useSafeArea: true,
+    // barrierColor: !isDark?null:Colors.white.withOpacity(0.05),
     builder: (_) {
       return StatefulBuilder(builder: (_, stateSetter) => AlertDialog(
           backgroundColor: isDark?Colors.black:Colors.white,

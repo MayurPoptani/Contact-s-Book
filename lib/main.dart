@@ -36,12 +36,12 @@ class ContactsApp extends StatelessWidget {
       iconTheme: IconThemeData(color: Colors.white),
       textTheme: GoogleFonts.ralewayTextTheme(ThemeData.dark().textTheme.apply(bodyColor: Colors.white)),
       primaryTextTheme: GoogleFonts.ralewayTextTheme(ThemeData.dark().textTheme.apply(bodyColor: Colors.white)),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFF212121),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white70,
-      ),
+      // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      //   type: BottomNavigationBarType.fixed,
+      //   backgroundColor: Color(0xFF212121),
+      //   selectedItemColor: Colors.white,
+      //   unselectedItemColor: Colors.white70,
+      // ),
       appBarTheme: AppBarTheme(color: Color(0xFF303030), iconTheme: IconThemeData(color: Colors.white),),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: Colors.white,
@@ -52,11 +52,11 @@ class ContactsApp extends StatelessWidget {
       iconTheme: IconThemeData(color: Colors.black),
       textTheme: GoogleFonts.ralewayTextTheme(ThemeData.light().textTheme.apply(bodyColor: Colors.black)),
       primaryTextTheme: GoogleFonts.ralewayTextTheme(ThemeData.dark().textTheme.apply(bodyColor: Colors.black)),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.black38,
-      ),
+      // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      //   type: BottomNavigationBarType.fixed,
+      //   selectedItemColor: Colors.black,
+      //   unselectedItemColor: Colors.black38,
+      // ),
       appBarTheme: AppBarTheme(color: Colors.white, iconTheme: IconThemeData(color: Colors.black),),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: Colors.black87,
