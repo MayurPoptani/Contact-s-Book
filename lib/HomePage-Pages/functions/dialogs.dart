@@ -58,6 +58,7 @@ Future<Contact> addNewContactItemDialog(BuildContext context, {Contact contact})
                       textCapitalization: TextCapitalization.words,
                       keyboardType: TextInputType.numberWithOptions(decimal: false, signed: false),
                       inputFormatters: [WhitelistingTextInputFormatter.digitsOnly],
+                      maxLength: 10,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(16),
                         filled: true,
@@ -106,7 +107,7 @@ Future<Contact> addNewContactItemDialog(BuildContext context, {Contact contact})
                         // child: Text(contact==null?"Add":"Update", style: TextStyle(color: isDark?Colors.white:Colors.black87),),
                         child: Text(contact==null?"Add":"Update", style: TextStyle(color: Colors.white),),
                         onPressed: () {
-                          if(nameController.text.trim().isNotEmpty) {
+                          if(nameController.text.trim().isNotEmpty && numberController.text.trim().length==10) {
                             Contact c;
                             if(contact==null) c = Contact(name: nameController.text.trim(), gender: isMale, createdOn: null, id: null, number: numberController.text.trim());
                             else c = contact.copyWith(name: nameController.text.trim(), gender: isMale, number: numberController.text.trim());
@@ -139,7 +140,7 @@ Future<MapEntry<Group,List<int>>> addNewGroupItemDialog(BuildContext context, {M
       return StatefulBuilder(builder: (_, stateSetter) => AlertDialog(
           backgroundColor: isDark?Colors.black:Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          title: Text(group==null?"Add Contact":"Update Contact", style: TextStyle(letterSpacing: 0.25,),),
+          title: Text(group==null?"Add Group":"Update Group", style: TextStyle(letterSpacing: 0.25,),),
           content: Container(
               color: isDark?Colors.black:Colors.white,
               child: Column(

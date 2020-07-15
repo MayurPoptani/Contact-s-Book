@@ -66,10 +66,16 @@ class _HomePageState extends State<HomePage> {
           onPressed: () async {
             if(_pageIndex == 0) {
               Contact newContact = await addNewContactItemDialog(context);
-              print("Insert ID = "+(await db.addNewOrUpdateContact(newContact)).toString());
+              if(newContact!=null) {
+                int insertId = await db.addNewOrUpdateContact(newContact);
+                print("Returned Insert Id = "+((insertId??"null").toString()));
+              }
             } else {
               MapEntry<Group,List<int>> groupNameAndContactIds = await addNewGroupItemDialog(context);
-              if(groupNameAndContactIds!=null) print((await db.addNewOrUpdateGroup(groupNameAndContactIds.key, groupNameAndContactIds.value)).toString());
+              if(groupNameAndContactIds!=null) {
+                int insertId = await db.addNewOrUpdateGroup(groupNameAndContactIds.key, groupNameAndContactIds.value);
+                print("Returned Insert Id = "+((insertId??null).toString()));
+              }
             }
           },
         ), 
